@@ -18,7 +18,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
+Vue.component('twist',             require('./components/Twist.vue'));
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
@@ -29,5 +29,15 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        text: 'my text from app',
+    }
 });
+
+const twists = new Vue({
+    el: '#twists',
+    data: {
+        'text': 'my text',
+    }
+})
